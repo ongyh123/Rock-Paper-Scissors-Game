@@ -10,3 +10,12 @@ const scissors_div = document.getElementById('s');
 // Set up Counter
 let userScore = 0;
 let computerScore = 0;
+
+// Listen for Events
+function main() {
+  rock_div.addEventListener('click', () => game('r'));
+  paper_div.addEventListener('click', () => game('p'));
+  scissors_div.addEventListener('click', () => game('s'));
+}
+
+main();
