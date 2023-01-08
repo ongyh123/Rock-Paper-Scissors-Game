@@ -18,6 +18,12 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
+function win(userChoice, computerChoice) {
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+}
+
 // UserChoice vs ComputerChoice Function
 function game(userChoice) {
   const computerChoice = getComputerChoice();
