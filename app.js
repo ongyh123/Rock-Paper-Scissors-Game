@@ -11,6 +11,28 @@ const scissors_div = document.getElementById('s');
 let userScore = 0;
 let computerScore = 0;
 
+//
+function game(userChoice) {
+  const computerChoice = getComputerChoice();
+  switch (userChoice + computerChoice) {
+    case 'rs':
+    case 'pr':
+    case 'sp':
+      win(userChoice, computerChoice);
+      break;
+    case 'sr':
+    case 'rp':
+    case 'ps':
+      lose(userChoice, computerChoice);
+      break;
+    case 'rr':
+    case 'pp':
+    case 'ss':
+      draw(userChoice, computerChoice);
+      break;
+  }
+}
+
 // Listen for Events
 function main() {
   rock_div.addEventListener('click', () => game('r'));
