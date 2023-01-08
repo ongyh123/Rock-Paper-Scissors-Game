@@ -41,6 +41,10 @@ function win(userChoice, computerChoice) {
   )}${smallUserWord} beats ${convertToWord(
     computerChoice
   )}${smallCompWord}. You win!`;
+
+  const userChoice_div = document.getElementById(userChoice);
+  userChoice_div.classList.add('green-glow');
+  setTimeout(() => userChoice_div.classList.remove('green-glow'), 300);
 }
 
 function lose(userChoice, computerChoice) {
@@ -54,6 +58,10 @@ function lose(userChoice, computerChoice) {
   )}${smallUserWord} loses to ${convertToWord(
     computerChoice
   )}${smallCompWord}. You lost!`;
+
+  const userChoice_div = document.getElementById(userChoice);
+  userChoice_div.classList.add('red-glow');
+  setTimeout(() => userChoice_div.classList.remove('red-glow'), 300);
 }
 
 function draw(userChoice, computerChoice) {
@@ -64,6 +72,10 @@ function draw(userChoice, computerChoice) {
   )}${smallUserWord} equals to ${convertToWord(
     computerChoice
   )}${smallCompWord}. It's draw!`;
+
+  const userChoice_div = document.getElementById(userChoice);
+  userChoice_div.classList.add('gray-glow');
+  setTimeout(() => userChoice_div.classList.remove('gray-glow'), 300);
 }
 
 // UserChoice vs ComputerChoice Function
