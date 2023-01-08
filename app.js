@@ -43,6 +43,29 @@ function win(userChoice, computerChoice) {
   )}${smallCompWord}. You win!`;
 }
 
+function lose(userChoice, computerChoice) {
+  const smallUserWord = 'user'.fontsize(3).sub();
+  const smallCompWord = 'comp'.fontsize(3).sub();
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = `${convertToWord(
+    userChoice
+  )}${smallUserWord} loses to ${convertToWord(
+    computerChoice
+  )}${smallCompWord}. You lost!`;
+}
+
+function draw(userChoice, computerChoice) {
+  const smallUserWord = 'user'.fontsize(3).sub();
+  const smallCompWord = 'comp'.fontsize(3).sub();
+  result_p.innerHTML = `${convertToWord(
+    userChoice
+  )}${smallUserWord} equals to ${convertToWord(
+    computerChoice
+  )}${smallCompWord}. It's draw!`;
+}
+
 // UserChoice vs ComputerChoice Function
 function game(userChoice) {
   const computerChoice = getComputerChoice();
