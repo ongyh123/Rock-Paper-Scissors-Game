@@ -18,11 +18,23 @@ function getComputerChoice() {
   return choices[randomNumber];
 }
 
+// Convert the representation to readable letter
+function convertToWord(letter) {
+  switch (letter) {
+    case 'r':
+      return 'Rock';
+    case 'p':
+      return 'Paper';
+    case 's':
+      return 'Scissors';
+  }
+}
+
 function win(userChoice, computerChoice) {
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = userChoice + ' beats ' + computerChoice + '. You win!';
+  result_p.innerHTML = convertToWord(userChoice) + ' beats ' + convertToWord(computerChoice) + '. You win!';
 }
 
 // UserChoice vs ComputerChoice Function
