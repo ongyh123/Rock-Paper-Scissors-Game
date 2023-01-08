@@ -11,7 +11,14 @@ const scissors_div = document.getElementById('s');
 let userScore = 0;
 let computerScore = 0;
 
-//
+// GetComputerChoice
+function getComputerChoice() {
+  const choices = ['r', 'p', 's'];
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
+}
+
+// UserChoice vs ComputerChoice Function
 function game(userChoice) {
   const computerChoice = getComputerChoice();
   switch (userChoice + computerChoice) {
